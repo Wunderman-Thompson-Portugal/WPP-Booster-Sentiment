@@ -1,47 +1,75 @@
-<!doctype html>
-<html class="no-js" lang="pt-PT">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My first Bulma website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Pitch detection in Web Audio using autocorrelation https://github.com/cwilso/pitchdetect -->
+    <script src="lib/pitchdetect.js"></script>
 
-<head>
-  <meta charset="utf-8">
-  <title>WPP Booster - Níveis de Sentimento</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <section class="hero is-success	 is-fullheight">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              WPP Booster - Níveis de Sentimento
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroB" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item ">
+                Joy/Neutral (warning)
+              </a>
+              <a class="navbar-item is-active">
+                Disgust (success)
+              </a>
+              <a class="navbar-item">
+                Anger (danger)
+              </a>
+              <a class="navbar-item">
+                Sadness (info)
+              </a>
+              <button onclick="toggleLiveInput()">use live input</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <div class="hero-body">
+        <div id="detector" class="container has-text-centered">
+            <div class="pitch"><span id="pitch">--</span>Hz</div>
+            <div class="note"><span id="note">--</span></div>
+			      <canvas id="output" width=300 height=42></canvas>
+            <img id="joy" class="is-hidden" width="30%" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f600.svg" />
+            <img id="disgust" class="" width="30%" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f635.svg" />
+            <img id="anger" class="is-hidden" width="30%" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f620.svg" />
+            <img id="sadness" class="is-hidden" width="30%" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f622.svg" />
+            <div id="detune"><span id="detune_amt">--</span><span id="flat">cents &#9837;</span><span id="sharp">cents &#9839;</span></div>
+      </div>
+    </div>
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <!-- Hero footer: will stick at the bottom -->
+    <div class="hero-foot">
+      <div class="container has-text-centered">
+      <p class="is-size-7">
+        © 2020 WPP Booster
+      </p>
+    </div>
+   </div>
+  </section>
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
 
-  <meta name="theme-color" content="#fafafa">
-</head>
-
-<body>
-
-  <!-- Add your site or application content here -->
-  <p>App para mostrar os níveis de sentimento com a voz</p>
-  <ul>
-    <li>Joy/Neutral (yellow)</li>
-    <li>Disgust (green)</li>
-    <li>Anger (red)</li>
-    <li>Sadness (blue)</li>
-  </ul>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-
+    <script type="text/javascript" src="lib/main.js"></script>
+  </body>
 </html>
