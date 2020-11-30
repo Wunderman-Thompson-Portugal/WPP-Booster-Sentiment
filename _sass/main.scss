@@ -17,7 +17,20 @@ $pink: #ff8080;
 $pink-invert: #fff;
 // Update the sans-serif font family
 $family-sans-serif: "Helvetica", "Arial", sans-serif;
+*/
 
+#detector {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+#waveform {
+    width: 50%;
+}
+
+
+/*
 // 3. Set the derived variables
 // Use the new pink as the primary color
 $primary: $pink;
