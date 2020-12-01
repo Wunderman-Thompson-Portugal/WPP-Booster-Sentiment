@@ -15,6 +15,10 @@ function joy() {
     sadnessdiv.style.display = "none";
     joydiv.style.display = "block";
     wrapperdiv.className= "hero is-warning is-fullheight";
+    document.getElementById("disgustmenu").className="navbar-item";
+    document.getElementById("angermenu").className="navbar-item";
+    document.getElementById("sadnessmenu").className="navbar-item";
+    document.getElementById("joymenu").className="navbar-item is-active";
   }
 }
 
@@ -25,6 +29,10 @@ function disgust() {
     sadnessdiv.style.display = "none";
     disgustdiv.style.display = "block";
     wrapperdiv.className= "hero is-success is-fullheight";
+    document.getElementById("joymenu").className="navbar-item";
+    document.getElementById("angermenu").className="navbar-item";
+    document.getElementById("sadnessmenu").className="navbar-item";
+    document.getElementById("disgustmenu").className="navbar-item is-active";
   }
 }
 
@@ -35,6 +43,10 @@ function anger() {
     sadnessdiv.style.display = "none";
     angerdiv.style.display = "block";
     wrapperdiv.className= "hero is-danger is-fullheight";
+    document.getElementById("disgustmenu").className="navbar-item";
+    document.getElementById("joymenu").className="navbar-item";
+    document.getElementById("sadnessmenu").className="navbar-item";
+    document.getElementById("angermenu").className="navbar-item is-active";
   }
 }
 
@@ -45,5 +57,9 @@ function sadness() {
     joydiv.style.display = "none";
     sadnessdiv.style.display = "block";
     wrapperdiv.className= "hero is-info is-fullheight";
+    document.getElementById("disgustmenu").className="navbar-item";
+    document.getElementById("angermenu").className="navbar-item";
+    document.getElementById("joymenu").className="navbar-item";
+    document.getElementById("sadnessmenu").className="navbar-item is-active";
   }
 }
