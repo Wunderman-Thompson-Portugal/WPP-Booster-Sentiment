@@ -15,8 +15,6 @@ function joy() {
     sadnessdiv.style.display = "none";
     joydiv.style.display = "block";
     wrapperdiv.className= "hero is-warning is-fullheight";
-  } else {
-    joydiv.style.display = "none";
   }
 }
 
@@ -27,8 +25,6 @@ function disgust() {
     sadnessdiv.style.display = "none";
     disgustdiv.style.display = "block";
     wrapperdiv.className= "hero is-success is-fullheight";
-  } else {
-    disgustdiv.style.display = "none";
   }
 }
 
@@ -39,8 +35,6 @@ function anger() {
     sadnessdiv.style.display = "none";
     angerdiv.style.display = "block";
     wrapperdiv.className= "hero is-danger is-fullheight";
-  } else {
-    angerdiv.style.display = "none";
   }
 }
 
@@ -51,7 +45,5 @@ function sadness() {
     joydiv.style.display = "none";
     sadnessdiv.style.display = "block";
     wrapperdiv.className= "hero is-info is-fullheight";
-  } else {
-    sadnessdiv.style.display = "none";
   }
 }
