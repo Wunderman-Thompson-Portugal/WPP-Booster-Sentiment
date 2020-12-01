@@ -11,7 +11,7 @@
 
   </head>
   <body>
-    <section class="hero is-success	 is-fullheight">
+    <section id="wrapper" class="hero	 is-fullheight">
     <div class="hero-head">
       <nav class="navbar">
         <div class="container">
@@ -28,16 +28,16 @@
           <div id="navbarMenuHeroB" class="navbar-menu">
             <div class="navbar-end">
               <a class="navbar-item " onclick="joy()">
-                Joy/Neutral (warning)
+                Joy/Neutral
               </a>
-              <a class="navbar-item is-active" onclick="disgust()">
-                Disgust (success)
+              <a class="navbar-item" onclick="disgust()">
+                Disgust
               </a>
               <a class="navbar-item" onclick="anger()">
-                Anger (danger)
+                Anger
               </a>
               <a class="navbar-item" onclick="sadness()">
-                Sadness (info)
+                Sadness
               </a>
               <button onclick="toggleLiveInput()">use live input</button>
             </div>
@@ -48,13 +48,27 @@
 
     <div class="hero-body">
         <div class="container has-text-centered vague">
-            <img id="joy" class="is-hidden" width="30%" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f600.svg" />
-            <img id="disgust" class="" width="30%" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f635.svg" />
-            <img id="anger" class="is-hidden" width="30%" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f620.svg" />
-            <img id="sadness" class="is-hidden" width="30%" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f622.svg" />
+            <img id="joy" style="display: none;"  width="30%" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f600.svg" />
+            <img id="disgust" style="display: none;"  class="" width="30%" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f635.svg" />
+            <img id="anger"  style="display: none;"  width="30%" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f620.svg" />
+            <img id="sadness" style="display: none;"  width="30%" src="https://raw.githubusercontent.com/twitter/twemoji/gh-pages/svg/1f622.svg" />
       </div>
 
       
+
+      <div  id="detector">
+        <div class="box">
+        <div class="pitch is-size-3"><span id="pitch">--</span>Hz</div>
+        <div class="note is-hidden"><span id="note">--</span></div>
+        <canvas id="output" class="is-hidden" width=300 height=42></canvas>
+        <div class="is-hidden"><div id="detune"><span id="detune_amt"  >--</span> cents <span id="flat">&#9837;</span><span id="sharp">&#9839;</span></div></div>
+        <canvas id="waveform" width="512" height="256"></canvas>
+      </div>
+      </div>
+    
+    </div>
+
+
     </div>
 
     <!-- Hero footer: will stick at the bottom -->
@@ -67,16 +81,7 @@
    </div>
   </section>
 
-      <div  id="detector">
-        <div class="box">
-        <div class="pitch is-size-3"><span id="pitch">--</span>Hz</div>
-        <div class="note is-hidden"><span id="note">--</span></div>
-        <canvas id="output" class="is-hidden" width=300 height=42></canvas>
-        <div class="is-hidden"><div id="detune"><span id="detune_amt"  >--</span> cents <span id="flat">&#9837;</span><span id="sharp">&#9839;</span></div></div>
-        <canvas id="waveform" width="512" height="256"></canvas>
-      </div>
-      </div>
-    </div>
+     
 
 
 
