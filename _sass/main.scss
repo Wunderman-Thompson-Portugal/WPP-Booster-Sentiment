@@ -25,12 +25,21 @@ $family-sans-serif: "Helvetica", "Arial", sans-serif;
   right: 1rem;
 }
 
-img {
+.hero-body img {
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
   border-radius: 50%;
   background-color: #664502;
 }
 
+#mic {
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  cursor: pointer;
+}
+#mic:focus {
+  outline: transparent;
+}
 
 /*
 // 3. Set the derived variables
