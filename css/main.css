@@ -16,6 +16,11 @@ $family-sans-serif: "Helvetica", "Arial", sans-serif;
   bottom: 1rem;
   right: 1rem; }
 
+img {
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  border-radius: 50%;
+  background-color: #664502; }
+
 /*
 // 3. Set the derived variables
 // Use the new pink as the primary color
