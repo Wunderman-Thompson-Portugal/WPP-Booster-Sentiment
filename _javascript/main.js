@@ -2,12 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Hello Bulma!');
 });
 
-// One-liner to resume playback when user interacted with the page.
-document.querySelector('button').addEventListener('click', function() {
-  context.resume().then(() => {
-    console.log('Playback resumed successfully');
-  });
-});
 
 
 var wrapperdiv = document.getElementById("wrapper");
